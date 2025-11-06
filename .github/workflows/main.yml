@@ -25,5 +25,7 @@ jobs:
           sleep 10
           docker ps -a
           curl -I http://localhost:8085   
+          echo " "
           curl -I http://localhost:8085/about
+          echo " "
           curl -I http://localhost:8085/env
