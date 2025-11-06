@@ -24,6 +24,7 @@ jobs:
         run: |
           sleep 10
           docker ps -a
+          echo " "
           curl -I http://localhost:8085   
           echo " "
           curl -I http://localhost:8085/about
