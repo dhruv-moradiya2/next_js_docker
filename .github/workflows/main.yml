@@ -17,6 +17,7 @@ jobs:
 
       - name: docker container up down
         run: |
+          echo ${{ secrets.VITE_ENV }} > .env
           docker compose up -d --build
 
       - name: list docker containers
