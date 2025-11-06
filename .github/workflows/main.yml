@@ -17,7 +17,11 @@ jobs:
 
       - name: docker container up down
         run: |
-          docker-compose down
+          if docker-compose down; then
+            echo "Docker-compose down executed successfully."
+          else
+            echo "Docker-compose down failed or no containers were running."
+          fi
           docker-compose up -d --build
 
       - name: list docker containers
