@@ -22,5 +22,6 @@ jobs:
 
       - name: list docker containers
         run: |
-          sleep 20
-          docker ps -a      
+          sleep 10
+          docker ps -a
+          curl -I http://localhost:8085      
