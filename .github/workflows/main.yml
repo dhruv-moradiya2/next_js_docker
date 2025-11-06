@@ -21,6 +21,7 @@ jobs:
             echo "Docker-compose down executed successfully."
           else
             echo "Docker-compose down failed or no containers were running."
+            exit 0
           fi
           docker-compose up -d --build
 
@@ -28,8 +29,3 @@ jobs:
         run: |
           sleep 20
           docker ps -a
-
-      
-
-      
-      
